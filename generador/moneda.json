@@ -1,0 +1,47 @@
+{
+  "fields": [
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "descripcion",
+      "type": "string"
+    },
+    {
+      "name": "abreviatura",
+      "type": "string"
+    },
+    {
+      "name": "id_monedaCaja",
+      "type": "integer#unsigned"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "id_monedaCaja",
+      "references": "id",
+      "on": "moneda_cajas",
+      "onDelete": "cascade",
+      "onUpdate": "cascade"
+    }
+  ],
+  "validations": [
+    {
+      "field": "nombre",
+      "rules": "required"
+    },
+     {
+      "field": "descripcion",
+      "rules": "required"
+    },
+    {
+      "field": "abreviatura",
+      "rules": "required"
+    },
+    {
+      "field": "id_monedaCaja",
+      "rules": "required"
+    }
+  ]
+}
